@@ -1,5 +1,3 @@
-//`node index.js` to run the file from the command prompt
-
 var translateWithNewKeyboard = function(transform, paragraph) {
   //ignore capitalization
   var keyboard = [['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
