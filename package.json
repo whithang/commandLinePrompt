@@ -1,0 +1,19 @@
+{
+  "name": "commandlineprogram",
+  "version": "1.0.0",
+  "description": "tbd from brilliant.org technical coding exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whithang/commandLinePrompt.git"
+  },
+  "author": "Kelly Whiting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whithang/commandLinePrompt/issues"
+  },
+  "homepage": "https://github.com/whithang/commandLinePrompt#readme"
+}
