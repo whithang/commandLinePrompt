@@ -35,7 +35,16 @@ var translateWithNewKeyboard = function(transform, paragraph) {
     }
   }
   paragraph = paragraph.toLowerCase();
-  var translatedContent = translateParagraph(paragraph);
+  var translatedContent = '';
+  var newLetter;
+  for (var char = 0; char < paragraph.length; char++) {
+    if (keyboardHash[paragraph[char]]) {
+      newLetter = keyboard[keyboardHash[paragraph[char]][0]][keyboardHash[paragraph[char]][1]];
+      translatedContent += newLetter;
+    } else {
+      translatedContent += paragraph[char];
+    }
+  }
 
   console.log('The new keyboard is: ', keyboard);
   console.log('The original paragraph was: ', paragraph);
@@ -95,19 +104,6 @@ var shiftKeyboard = function(shiftCount, keyboard) {
     }
   }
   return newKeyboard;
-};
-
-var translateParagraph = function(paragraph){
-  var newContent = '';
-  var newLetter;
-  for (var char = 0; char < paragraph.length; char++) {
-    if (keyboardHash[paragraph[char]]) {
-      newLetter = keyboard[keyboardHash[paragraph[char]][0]][keyboardHash[paragraph[char]][1]];
-      newContent += newLetter;
-    } else {
-      newContent += paragraph[char];
-    }
-  }
 };
 
 // translateWithNewKeyboard('H', 'What a nice day it is today!');
